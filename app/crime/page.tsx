@@ -30,21 +30,19 @@ const Crime = () => {
         </tr>
       </thead>
       <tbody>
-        {popupInfo.map((i) => (
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-            <td className="px-6 py-4">{i.category}</td>
-            <td className="px-6 py-4">{i.location.street.name}</td>
-            <td className="px-6 py-4">{i.month}</td>
-            <td className="px-6 py-4 text-right">
-              <a
-                href="#"
-                className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-              >
-                Details
-              </a>
-            </td>
-          </tr>
-        ))}
+        <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <td className="px-6 py-4">Robbery</td>
+          <td className="px-6 py-4">Argyle street</td>
+          <td className="px-6 py-4">2023-07</td>
+          <td className="px-6 py-4 text-right">
+            <a
+              href="#"
+              className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+            >
+              Details
+            </a>
+          </td>
+        </tr>
       </tbody>
     </table>
   );
