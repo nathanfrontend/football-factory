@@ -18,6 +18,7 @@ import { IoMdClose } from "react-icons/io";
 import { AiOutlineExpand } from "react-icons/ai";
 import { MapLayerMouseEvent } from "react-map-gl/dist/esm/types";
 import footballAreas from "../footballMap/FootballServerAction";
+import Link from "next/link";
 
 type teamState = {
   type: string;
@@ -193,12 +194,14 @@ const FootballMap: React.FC<Props> = ({ footballAreas, crimeByLocation }) => {
                               Date
                             </th>
                             <th scope="col" className="px-6 py-3">
-                              <button
-                                className="p-4 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
-                                onClick={() => setPopupInfo(null)}
-                              >
-                                <IoMdClose size={30} />
-                              </button>
+                              <div className="flex space-x-2">
+                                <Link href="crime">
+                                  <AiOutlineExpand size={30} />
+                                </Link>
+                                <button onClick={() => setPopupInfo(null)}>
+                                  <IoMdClose size={30} />
+                                </button>
+                              </div>
                             </th>
                           </tr>
                         </thead>
