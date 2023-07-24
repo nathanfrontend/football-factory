@@ -122,7 +122,7 @@ const FootballMap: React.FC<Props> = ({ footballAreas, crimeByLocation }) => {
       res.month.includes(dateValue)
     );
 
-    setPopupInfo(data.slice(0, 10));
+    setPopupInfo(data);
   }
 
   function formatDateToYearMonth(sDate: Date) {
@@ -203,7 +203,7 @@ const FootballMap: React.FC<Props> = ({ footballAreas, crimeByLocation }) => {
                           </tr>
                         </thead>
                         <tbody>
-                          {popupInfo.map((i) => (
+                          {popupInfo.slice(0, 10).map((i) => (
                             <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                               <td className="px-6 py-4">{i.category}</td>
                               <td className="px-6 py-4">
