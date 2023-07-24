@@ -18,10 +18,7 @@ const Crime = () => {
             Date
           </th>
           <th scope="col" className="px-6 py-3">
-            <div className="flex space-x-2">
-              <Link href="crime">
-                <AiOutlineExpand size={30} />
-              </Link>
+            <div className="flex justify-end space-x-2">
               <Link href="/">
                 <IoMdClose size={30} />
               </Link>
@@ -34,18 +31,10 @@ const Crime = () => {
           <td className="px-6 py-4">Robbery</td>
           <td className="px-6 py-4">Argyle street</td>
           <td className="px-6 py-4">2023-07</td>
-          <td className="px-6 py-4 text-right">
-            <a
-              href="#"
-              className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-            >
-              Details
-            </a>
-          </td>
         </tr>
       </tbody>
     </table>
   );
 };
-export async function getServerSideProps() {}
+
 export default Crime;
